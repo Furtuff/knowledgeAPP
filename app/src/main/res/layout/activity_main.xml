@@ -22,7 +22,7 @@
         android:gravity="center"
         android:background="@drawable/blue_circle"
         android:layout_marginBottom="10sp"
-        android:id="@+id/editText3"
+        android:id="@+id/logintext"
         android:hint="Your E Mail ID" />
 
     <EditText
@@ -34,7 +34,7 @@
         android:textColorHint="#0000ff"
         android:layout_marginBottom="10sp"
         android:background="@drawable/blue_circle"
-        android:id="@+id/editText4"
+        android:id="@+id/passwordText"
         android:hint="Choose /type your password" />
 
     <Button
