@@ -24,8 +24,7 @@
         <activity android:name=".FiveActivity" />
         <activity android:name=".SetTargetActivity"></activity>
         <activity android:name=".SixActivity" />
-        <activity android:name=".Assessment"></activity>
-        <activity android:name=".ListCalendarActivity">
+        <activity android:name=".ListCalendarActivity"></activity>
 
     </application>
 
