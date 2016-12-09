@@ -49,6 +49,8 @@ public class CustomAdapterWithCalendar extends BaseAdapter {
         final View customView;
 
         customView = inflater.inflate(R.layout.calendar_listview, parent, false);
+        ViewGroup.LayoutParams params = customView.getLayoutParams();
+        params.height = 200;
         final CheckBox text = (CheckBox) customView.findViewById(R.id.checkBox2);
         final Button dateButton = (Button)customView.findViewById(R.id.dateButton);
         dateButton.setOnClickListener(new View.OnClickListener() {
