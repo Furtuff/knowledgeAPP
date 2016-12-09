@@ -12,7 +12,7 @@ public class ListCalendarActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list_calendar);
 
         ListView firstListview = (ListView)findViewById(R.id.ListviewCalendar);
-        CustomAdapter customAdapter = new CustomAdapter(this,ArrayStatic.fakelist());
+        CustomAdapterWithCalendar customAdapter = new CustomAdapterWithCalendar(this,ArrayStatic.fakelist());
         firstListview.setAdapter(customAdapter);
     }
 }

@@ -5,7 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -44,11 +46,17 @@ public class CustomAdapterWithCalendar extends BaseAdapter {
     public View getView(final int position, View convertView, ViewGroup parent) {
         inflater = (LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         //(LayoutInflater.from(getContext()));
-        View customView;
+        final View customView;
 
-        customView = inflater.inflate(R.layout.check_listview, parent, false);
-        final CheckBox text = (CheckBox) customView.findViewById(R.id.checkBox);
-
+        customView = inflater.inflate(R.layout.calendar_listview, parent, false);
+        final CheckBox text = (CheckBox) customView.findViewById(R.id.checkBox2);
+        final Button dateButton = (Button)customView.findViewById(R.id.dateButton);
+        dateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(customView.getContext(),"Next update", Toast.LENGTH_SHORT).show();
+            }
+        });
         text.setText(list.get(position));
         if(checkBoxState[position]){
             text.setChecked(true);
