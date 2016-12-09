@@ -12,6 +12,7 @@
 
     <Button
         android:text="> Next"
+        android:textColor="#FFF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/nextBTN"

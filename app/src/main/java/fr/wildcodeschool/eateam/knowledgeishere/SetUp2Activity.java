@@ -6,24 +6,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Self_Assessment extends AppCompatActivity {
+public class SetUp2Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_self_assessment);
+        setContentView(R.layout.activity_set_up2);
 
-        Button nextBTN = (Button) findViewById(R.id.nextBTN);
-        nextBTN.setOnClickListener(new View.OnClickListener() {
+        Button nextBTN2 = (Button) findViewById(R.id.nextBTN3);
+        nextBTN2.setOnClickListener(new View.OnClickListener() {
 
 
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(Self_Assessment.this, Assessment.class);
+                Intent intent = new Intent(SetUp2Activity.this, SetTargetActivity.class);
                 startActivity(intent);
             }
         });
-
     }
 }

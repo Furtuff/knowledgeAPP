@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class ArrayStatic {
     public static ArrayList<String> fakelist(){
         ArrayList<String> fakelist = new ArrayList<>();
-        for (int i = 0 ; i <50; i++){
+        for (int i = 0 ; i <10; i++){
             fakelist.add("Concrete description of the task planned to be done XXX and YYY are executed daily");
         }
         return fakelist;

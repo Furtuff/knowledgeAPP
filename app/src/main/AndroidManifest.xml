@@ -22,10 +22,12 @@
         <activity android:name=".ThirdActivity" />
         <activity android:name=".FourActivity" />
         <activity android:name=".FiveActivity" />
-        <activity android:name=".SetTargetActivity"></activity>
+        <activity android:name=".SetTargetActivity" />
         <activity android:name=".SixActivity" />
-        <activity android:name=".ListCalendarActivity"></activity>
-
+        <activity android:name=".ListCalendarActivity" />
+        <activity android:name=".SetUp2Activity" />
+        <activity android:name=".SetUp3Activity" />
+        <activity android:name=".Main2Activity"></activity>
     </application>
 
 </manifest>

@@ -10,13 +10,4 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="fr.wildcodeschool.eateam.knowledgeishere.Assessment">
 
-    <ExpandableListView
-        android:id="@+id/places_list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="15dp"
-        android:dividerHeight="10dp"
-        android:divider="@color/transparent">
-    </ExpandableListView>
-
 </RelativeLayout>

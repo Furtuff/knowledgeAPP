@@ -38,7 +38,8 @@
         android:layout_alignStart="@+id/seekBar3"
         android:max="10"
         android:progress="3"
-        style="@android:style/Widget.Material.SeekBar" />
+        style="@android:style/Widget.Material.SeekBar"
+        android:clickable="false" />
 
     <SeekBar
         android:layout_width="200dp"
