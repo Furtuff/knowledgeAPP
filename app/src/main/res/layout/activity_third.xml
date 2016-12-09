@@ -10,9 +10,10 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="fr.wildcodeschool.eateam.knowledgeishere.ThirdActivity">
 
-    <CheckBox
-        android:text="CheckBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox3" />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/thirdListview">
+
+    </ListView>
 </RelativeLayout>
