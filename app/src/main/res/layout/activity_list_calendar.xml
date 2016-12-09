@@ -12,11 +12,13 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/fragmentContainer"></FrameLayout>
+        android:id="@+id/fragmentContainer"
+        >
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/ListviewCalendar">
 
     </ListView>
+    </FrameLayout>
 </RelativeLayout>

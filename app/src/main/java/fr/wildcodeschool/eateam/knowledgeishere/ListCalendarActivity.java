@@ -17,8 +17,8 @@ public class ListCalendarActivity extends AppCompatActivity {
         firstListview.setAdapter(customAdapter);
     }
     //animation du menu
-    private void toggleList() {
-        Fragment f = getFragmentManager().findFragmentByTag(LIST_FRAGMENT_TAG);
+    public  void launchCalendar() {
+        Fragment f = getFragmentManager().findFragmentByTag("prout");
         if (f != null) {
             getFragmentManager().popBackStack();
         } else {
@@ -27,8 +27,8 @@ public class ListCalendarActivity extends AppCompatActivity {
                             R.animator.slide_down,
                             R.animator.slide_up,
                             R.animator.slide_down)
-                    .add(R.id.fragmentContainer, SlidingListFragment
-                                    .instantiate(this, SlidingListFragment.class.getName()),
+                    .add(R.id.fragmentContainer, CalendarFragment
+                                    .instantiate(this, CalendarFragment.class.getName()),
                             "prout"
                     ).addToBackStack(null).commit();
         }
