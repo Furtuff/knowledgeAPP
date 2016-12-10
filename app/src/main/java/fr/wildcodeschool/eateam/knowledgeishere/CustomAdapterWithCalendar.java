@@ -178,7 +178,7 @@ public class CustomAdapterWithCalendar extends BaseAdapter {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Activity activity = (Activity)context;
-                        Intent intent = new Intent(activity,SetUp2Activity.class);
+                        Intent intent = new Intent(activity,SetUp3Activity.class);
                         activity.startActivity(intent);
                         dialog.dismiss();
                     }
