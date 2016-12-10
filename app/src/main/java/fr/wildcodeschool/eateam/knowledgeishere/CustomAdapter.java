@@ -6,8 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -25,6 +27,7 @@ public class CustomAdapter extends BaseAdapter {
         //super(context, R.layout.list_view_item);
         this.context = context;
         this.list = list;
+        list.add("Done");
         checkBoxState = new boolean[list.size()];
     }
 
@@ -47,28 +50,40 @@ public class CustomAdapter extends BaseAdapter {
         inflater = (LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         //(LayoutInflater.from(getContext()));
         View customView;
-
-        customView = inflater.inflate(R.layout.check_listview, parent, false);
-        final CheckBox text = (CheckBox) customView.findViewById(R.id.checkBox);
-
-        text.setText(list.get(position));
-        if(checkBoxState[position]){
-            text.setChecked(true);
-        }
-        text.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(((CheckBox)v).isChecked()){
-                    text.setChecked(true);
-                    checkBoxState[position] = true;
-                }else{
-                    text.setChecked(false);
-                    checkBoxState[position] = false;
+        if (getItem(position).equals("Done")) {
+            customView = inflater.inflate(R.layout.donelayout, parent, false);
+            Button buttonDone = (Button)customView.findViewById(R.id.done);
+            buttonDone.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(context,"TADDDAAAA !",Toast.LENGTH_SHORT).show();
                 }
+            });
+            return customView;
+
+        } else {
+
+            customView = inflater.inflate(R.layout.check_listview, parent, false);
+            final CheckBox text = (CheckBox) customView.findViewById(R.id.checkBox);
+
+            text.setText(list.get(position));
+            if (checkBoxState[position]) {
+                text.setChecked(true);
             }
-        });
-        return customView;
+            text.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (((CheckBox) v).isChecked()) {
+                        text.setChecked(true);
+                        checkBoxState[position] = true;
+                    } else {
+                        text.setChecked(false);
+                        checkBoxState[position] = false;
+                    }
+                }
+            });
+            return customView;
 
+        }
     }
-
 }
