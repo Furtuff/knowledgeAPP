@@ -12,7 +12,7 @@
     tools:context="fr.wildcodeschool.eateam.knowledgeishere.Main2Activity">
 
 
-    <Button
+    <TextView
         android:text="Dashboard"
         android:textColor="@color/white"
         android:background="@color/transparent"
@@ -21,50 +21,65 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="140dp"
-        android:id="@+id/button" />
+        android:id="@+id/txtDasb"
+        android:onClick="onClick"
+        android:clickable="true"
+        android:textSize="25sp" />
 
-    <Button
+    <TextView
         android:text="Action Plan"
         android:textColor="@color/white"
         android:background="@color/transparent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button"
-        android:layout_alignStart="@+id/button"
+        android:layout_below="@+id/txtDasb"
+        android:layout_alignStart="@+id/txtDasb"
         android:layout_marginTop="10dp"
-        android:id="@+id/button2" />
+        android:onClick="onClick"
+        android:id="@+id/txtAct"
+        android:clickable="true"
+        android:textSize="25sp" />
 
-    <Button
+    <TextView
         android:text="News Feed"
         android:textColor="@color/white"
         android:background="@color/transparent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button2"
-        android:layout_alignStart="@+id/button2"
+        android:layout_below="@+id/txtAct"
+        android:layout_alignStart="@+id/txtAct"
         android:layout_marginTop="10dp"
-        android:id="@+id/button3" />
+        android:onClick="onClick"
+        android:id="@+id/txtNews"
+        android:clickable="true"
+        android:textSize="25sp" />
 
-    <Button
-        android:text="Settings"
-        android:textColor="@color/white"
-        android:background="@color/transparent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button3"
-        android:layout_alignStart="@+id/button3"
-        android:layout_marginTop="10dp"
-        android:id="@+id/button4"
-         />
-
-    <Button
+    <TextView
         android:text="..."
         android:textColor="@color/white"
         android:background="@color/transparent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button4"
-        android:layout_alignStart="@+id/button4"
         android:layout_marginTop="10dp"
-        android:id="@+id/button6" />
+        android:id="@+id/txtPoint"
+        android:onClick="onClick"
+        android:clickable="true"
+        android:textSize="25sp"
+        android:layout_below="@+id/txtSett"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Settings"
+        android:textColor="@color/white"
+        android:background="@color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/txtSett"
+        android:onClick="onClick"
+        android:clickable="true"
+        android:textSize="25sp"
+        android:layout_below="@+id/txtNews"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
