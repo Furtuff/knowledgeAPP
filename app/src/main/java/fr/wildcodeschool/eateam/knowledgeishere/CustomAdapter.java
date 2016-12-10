@@ -1,6 +1,8 @@
 package fr.wildcodeschool.eateam.knowledgeishere;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -56,7 +58,10 @@ public class CustomAdapter extends BaseAdapter {
             buttonDone.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(context,"TADDDAAAA !",Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(context,"TADDDAAAA !",Toast.LENGTH_SHORT).show();
+
+                    Intent intent = new Intent(((Activity)context),SetUp2Activity.class);
+                    ((Activity)context).startActivity(intent);
                 }
             });
             return customView;
