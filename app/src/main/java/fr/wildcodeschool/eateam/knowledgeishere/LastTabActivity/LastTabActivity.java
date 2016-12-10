@@ -9,6 +9,7 @@ import android.widget.TabHost;
 import fr.wildcodeschool.eateam.knowledgeishere.FirstActivity;
 import fr.wildcodeschool.eateam.knowledgeishere.FiveActivity;
 import fr.wildcodeschool.eateam.knowledgeishere.FourActivity;
+import fr.wildcodeschool.eateam.knowledgeishere.R;
 import fr.wildcodeschool.eateam.knowledgeishere.SecondActivity;
 import fr.wildcodeschool.eateam.knowledgeishere.SixActivity;
 import fr.wildcodeschool.eateam.knowledgeishere.ThirdActivity;
@@ -19,6 +20,7 @@ public class LastTabActivity extends TabActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_assessment);
         TabHost mTabHost = getTabHost();
         mTabHost.setTextAlignment(TabHost.TEXT_ALIGNMENT_CENTER);
 
