@@ -12,7 +12,7 @@ public class Assessment extends TabActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_assessment);
+        this.setTitle("Assessment");
 
         TabHost mTabHost = getTabHost();
 
@@ -20,8 +20,7 @@ public class Assessment extends TabActivity {
         mTabHost.addTab(mTabHost.newTabSpec("second").setIndicator("B").setContent(new Intent(this , SecondActivity.class )));
         mTabHost.addTab(mTabHost.newTabSpec("third").setIndicator("C").setContent(new Intent(this , ThirdActivity.class )));
         mTabHost.addTab(mTabHost.newTabSpec("four").setIndicator("D").setContent(new Intent(this , FourActivity.class )));
-        mTabHost.addTab(mTabHost.newTabSpec("five").setIndicator("E").setContent(new Intent(this , FiveActivity.class )));
-        mTabHost.addTab(mTabHost.newTabSpec("six").setIndicator("F").setContent(new Intent(this , SixActivity.class )));
+
         mTabHost.setCurrentTab(0);
 
     }

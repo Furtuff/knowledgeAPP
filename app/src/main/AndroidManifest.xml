@@ -23,9 +23,7 @@
         <activity android:name=".SecondActivity" />
         <activity android:name=".ThirdActivity" />
         <activity android:name=".FourActivity" />
-        <activity android:name=".FiveActivity" />
         <activity android:name=".SetTargetActivity" />
-        <activity android:name=".SixActivity" />
         <activity android:name=".SetUpActivity" />
         <activity android:name=".SetUp2Activity" />
         <activity android:name=".SetUp3Activity" />

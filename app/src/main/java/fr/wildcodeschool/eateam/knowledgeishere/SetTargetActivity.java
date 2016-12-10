@@ -14,6 +14,7 @@ public class SetTargetActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_target);
+        this.setTitle("Set Target");
         // première ligne
         final TextView textView1 = (TextView)findViewById(R.id.textView9);
         SeekBar seekBar1 = (SeekBar)findViewById(R.id.seekBar1);

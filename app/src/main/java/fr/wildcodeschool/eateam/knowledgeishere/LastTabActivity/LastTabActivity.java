@@ -2,18 +2,10 @@ package fr.wildcodeschool.eateam.knowledgeishere.LastTabActivity;
 
 import android.app.TabActivity;
 import android.content.Intent;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TabHost;
 
-import fr.wildcodeschool.eateam.knowledgeishere.FirstActivity;
-import fr.wildcodeschool.eateam.knowledgeishere.FiveActivity;
-import fr.wildcodeschool.eateam.knowledgeishere.FourActivity;
 import fr.wildcodeschool.eateam.knowledgeishere.R;
-import fr.wildcodeschool.eateam.knowledgeishere.SecondActivity;
-import fr.wildcodeschool.eateam.knowledgeishere.SixActivity;
-import fr.wildcodeschool.eateam.knowledgeishere.ThirdActivity;
 
 
 public class LastTabActivity extends TabActivity {

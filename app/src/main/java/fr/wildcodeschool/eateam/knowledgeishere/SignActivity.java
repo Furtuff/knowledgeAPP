@@ -31,6 +31,8 @@ public class SignActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sign);
         mDBHandler = new DBHandler(this);
         this.setTitle("Login");
+
+
         // check if database exist
         File database = this.getApplicationContext().getDatabasePath("database.sqlite");
         if (!database.exists()) {
@@ -63,6 +65,18 @@ public class SignActivity extends AppCompatActivity {
 
             }
         });
+
+        Button button5 = (Button) findViewById(R.id.button5);
+        button5.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(SignActivity.this, SetUpActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     //copying database from assets to database folder

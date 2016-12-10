@@ -12,6 +12,7 @@ public class SetUp3Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_up3);
+        this.setTitle("Set Up");
 
         Button next = (Button) findViewById(R.id.nextBTN4);
         next.setOnClickListener(new View.OnClickListener() {

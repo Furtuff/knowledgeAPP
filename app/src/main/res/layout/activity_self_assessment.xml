@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/nextBTN"
-        android:layout_below="@+id/radioButton6"
+        android:layout_below="@+id/radioButton4"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="33dp"
         android:layout_marginTop="35dp"
@@ -59,22 +59,6 @@
         android:layout_below="@+id/radioButton3"
         android:layout_alignStart="@+id/radioButton3" />
 
-    <RadioButton
-        android:text="Assess Dimension E"
-        android:textSize="20sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/radioButton5"
-        android:layout_below="@+id/radioButton4"
-        android:layout_alignStart="@+id/radioButton2" />
 
-    <RadioButton
-        android:text="Assess Dimension F"
-        android:textSize="20sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/radioButton6"
-        android:layout_below="@+id/radioButton5"
-        android:layout_alignStart="@+id/radioButton4" />
 
 </RelativeLayout>

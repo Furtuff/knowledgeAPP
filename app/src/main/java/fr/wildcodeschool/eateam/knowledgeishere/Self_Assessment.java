@@ -12,6 +12,7 @@ public class Self_Assessment extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_self_assessment);
+        this.setTitle("Self Assessment");
 
         Button nextBTN = (Button) findViewById(R.id.nextBTN);
         nextBTN.setOnClickListener(new View.OnClickListener() {
