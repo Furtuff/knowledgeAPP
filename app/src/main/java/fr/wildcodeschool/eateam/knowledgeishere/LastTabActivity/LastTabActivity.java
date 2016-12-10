@@ -2,6 +2,7 @@ package fr.wildcodeschool.eateam.knowledgeishere.LastTabActivity;
 
 import android.app.TabActivity;
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TabHost;
@@ -20,7 +21,7 @@ public class LastTabActivity extends TabActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_assessment);
+        setContentView(R.layout.activity_last_tab);
         TabHost mTabHost = getTabHost();
         mTabHost.setTextAlignment(TabHost.TEXT_ALIGNMENT_CENTER);
 

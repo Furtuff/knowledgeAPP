@@ -30,6 +30,7 @@ public class SignActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign);
         mDBHandler = new DBHandler(this);
+        this.setTitle("Login");
         // check if database exist
         File database = this.getApplicationContext().getDatabasePath("database.sqlite");
         if (!database.exists()) {
