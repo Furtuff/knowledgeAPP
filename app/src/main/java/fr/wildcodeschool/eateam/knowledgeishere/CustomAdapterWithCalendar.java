@@ -6,6 +6,7 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,11 +35,19 @@ public class CustomAdapterWithCalendar extends BaseAdapter {
     boolean[] checkBoxState;
     View customView;
     Button dateButton;
+    ArrayList<Date> fakedateList;
 
     public CustomAdapterWithCalendar(Context context, ArrayList<String> list) {
         //super(context, R.layout.list_view_item);
         this.context = context;
         this.list = list;
+        fakedateList = new ArrayList<>();
+        Calendar calendar = Calendar.getInstance();
+        for (int i = 0; i <list.size();i++){
+            calendar.add(Calendar.DAY_OF_MONTH,i);
+            fakedateList.add(calendar.getTime());
+
+        }
         checkBoxState = new boolean[list.size()];
     }
 
@@ -62,37 +71,63 @@ public class CustomAdapterWithCalendar extends BaseAdapter {
         inflater = (LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         //(LayoutInflater.from(getContext()));
 
+        if(position == getCount()-1) {
 
-        customView = inflater.inflate(R.layout.calendar_listview, parent, false);
-        ViewGroup.LayoutParams params = customView.getLayoutParams();
-        params.height = 200;
-        final CheckBox text = (CheckBox) customView.findViewById(R.id.checkBox2);
-        this.dateButton = (Button)customView.findViewById(R.id.dateButton);
-        dateButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showDatePicker(dateButton);
-                Toast.makeText(customView.getContext(),"Next update", Toast.LENGTH_SHORT).show();
-            }
-        });
-        text.setText(list.get(position));
-        if(checkBoxState[position]){
-            text.setChecked(true);
-        }
-        text.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(((CheckBox)v).isChecked()){
-                    text.setChecked(true);
-                    checkBoxState[position] = true;
-                }else{
-                    text.setChecked(false);
-                    checkBoxState[position] = false;
+            customView = inflater.inflate(R.layout.calendar_listview, parent, false);
+            ViewGroup.LayoutParams params = customView.getLayoutParams();
+            params.height = 200;
+            final CheckBox text = (CheckBox) customView.findViewById(R.id.checkBox2);
+            this.dateButton = (Button) customView.findViewById(R.id.dateButton);
+            dateButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    showDatePicker(dateButton);
+                    Toast.makeText(customView.getContext(), "Next update", Toast.LENGTH_SHORT).show();
                 }
+            });
+            text.setText(list.get(position));
+            if (checkBoxState[position]) {
+                text.setChecked(true);
             }
-        });
-        return customView;
-
+            text.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (((CheckBox) v).isChecked()) {
+                        text.setChecked(true);
+                        checkBoxState[position] = true;
+                    } else {
+                        text.setChecked(false);
+                        checkBoxState[position] = false;
+                    }
+                }
+            });
+            return customView;
+        }else {
+            customView = inflater.inflate(R.layout.listview_with_date, parent, false);
+            ViewGroup.LayoutParams params = customView.getLayoutParams();
+            params.height = 200;
+            TextView textView = (TextView)customView.findViewById(R.id.dateTextView);
+            SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
+            textView.setText(formatter.format(fakedateList.get(position)));
+            final CheckBox text = (CheckBox) customView.findViewById(R.id.checkdate);
+             text.setText(list.get(position));
+            if (checkBoxState[position]) {
+                text.setChecked(true);
+            }
+            text.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (((CheckBox) v).isChecked()) {
+                        text.setChecked(true);
+                        checkBoxState[position] = true;
+                    } else {
+                        text.setChecked(false);
+                        checkBoxState[position] = false;
+                    }
+                }
+            });
+            return customView;
+        }
     }
     public void showDatePicker(final Button datePickerShowDialogButton) {
         // Initializiation
@@ -129,7 +164,7 @@ public class CustomAdapterWithCalendar extends BaseAdapter {
         dateToDisplay.set(year, month, day);
         dateTextView.setText(dateViewFormatter.format(dateToDisplay.getTime()));
         // Buttons
-        dialogBuilder.setNegativeButton("Go to today",
+        dialogBuilder.setNegativeButton("Cancel",
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -142,12 +177,9 @@ public class CustomAdapterWithCalendar extends BaseAdapter {
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Calendar choosen = Calendar.getInstance();
-                        choosen.set(datePicker.getYear(),
-                                datePicker.getMonth(),
-                                datePicker.getDayOfMonth());
-                        datePickerShowDialogButton.setText(dateViewFormatter
-                                .format(choosen.getTime()));
+                        Activity activity = (Activity)context;
+                        Intent intent = new Intent(activity,SetUp2Activity.class);
+                        activity.startActivity(intent);
                         dialog.dismiss();
                     }
                 });
