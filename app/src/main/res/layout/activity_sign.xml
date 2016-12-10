@@ -23,7 +23,8 @@
         android:layout_marginBottom="10sp"
         android:id="@+id/logintext"
         android:hint="Your E Mail ID"
-        android:layout_height="45sp" />
+        android:layout_height="45sp"
+        android:fontFamily="roboto" />
 
     <EditText
         android:layout_width="match_parent"
@@ -35,7 +36,8 @@
         android:background="@drawable/blue_circle"
         android:id="@+id/passwordText"
         android:hint="Choose / Type Your Password"
-        android:layout_height="45sp" />
+        android:layout_height="45sp"
+        android:fontFamily="roboto" />
 
     <Button
         android:text="F"
@@ -55,7 +57,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/buttonGoogle"
         android:layout_marginBottom="10sp"
-        android:background="@drawable/boutonrect_google" />
+        android:background="@drawable/boutonrect_google"
+        android:fontFamily="sans-serif-medium" />
 
     <Button
         android:text="Sign in "

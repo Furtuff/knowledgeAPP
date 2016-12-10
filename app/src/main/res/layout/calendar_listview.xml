@@ -15,13 +15,16 @@
 
        />
     <Button
-        android:text="Set\n deadline"
+        android:text="Set deadline"
         android:textColor="@color/white"
-        android:layout_width="51dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8sp"
+        android:layout_marginStart="35dp"
         android:background="@drawable/base_button"
         android:id="@+id/dateButton"
         android:textAllCaps="false"
-        android:layout_weight="0.06" />
+        android:layout_weight="0.06"
+        android:layout_width="55dp"
+        android:fontFamily="roboto"
+        android:textSize="14sp" />
 </LinearLayout>
