@@ -9,14 +9,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
         <activity android:name=".SignActivity">
-            <!--android:theme="@style/CustomTheme"> -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
 
         <activity android:name=".Self_Assessment" />
         <activity android:name=".ListCalendarActivity" />
@@ -36,7 +34,7 @@
         <activity android:name=".LastTabActivity.ActionPlanActivity" />
         <activity android:name=".LastTabActivity.DashBoardActivity" />
         <activity android:name=".LastTabActivity.NewsFeedActivity" />
-        <activity android:name=".LastTabActivity.ThreePointActivity"></activity>
+        <activity android:name=".LastTabActivity.ThreePointActivity"/>
     </application>
 
 </manifest>

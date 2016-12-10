@@ -12,7 +12,7 @@
     tools:context="fr.wildcodeschool.eateam.knowledgeishere.Main2Activity">
 
 
-    <TextView
+    <Button
         android:text="Dashboard"
         android:textColor="@color/white"
         android:background="@color/transparent"
@@ -24,9 +24,12 @@
         android:id="@+id/txtDasb"
         android:onClick="onClick"
         android:clickable="true"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        android:textAllCaps="false"
+        android:fontFamily="roboto"
+        android:textStyle="normal|bold" />
 
-    <TextView
+    <Button
         android:text="Action Plan"
         android:textColor="@color/white"
         android:background="@color/transparent"
@@ -38,9 +41,12 @@
         android:onClick="onClick"
         android:id="@+id/txtAct"
         android:clickable="true"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        android:textAllCaps="false"
+        android:fontFamily="roboto"
+        android:textStyle="normal|bold" />
 
-    <TextView
+    <Button
         android:text="News Feed"
         android:textColor="@color/white"
         android:background="@color/transparent"
@@ -52,9 +58,12 @@
         android:onClick="onClick"
         android:id="@+id/txtNews"
         android:clickable="true"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        android:textAllCaps="false"
+        android:fontFamily="roboto"
+        android:textStyle="normal|bold" />
 
-    <TextView
+    <Button
         android:text="..."
         android:textColor="@color/white"
         android:background="@color/transparent"
@@ -66,9 +75,12 @@
         android:clickable="true"
         android:textSize="25sp"
         android:layout_below="@+id/txtSett"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        android:fontFamily="roboto"
+        android:textStyle="normal|bold" />
 
-    <TextView
+    <Button
         android:text="Settings"
         android:textColor="@color/white"
         android:background="@color/transparent"
@@ -80,6 +92,9 @@
         android:clickable="true"
         android:textSize="25sp"
         android:layout_below="@+id/txtNews"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        android:fontFamily="roboto"
+        android:textStyle="normal|bold" />
 
 </RelativeLayout>
