@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import fr.wildcodeschool.eateam.knowledgeishere.DBHandler.DBHandler;
 import fr.wildcodeschool.eateam.knowledgeishere.Model.LoginData;
 
-public class MainActivity extends AppCompatActivity {
+public class SignActivity extends AppCompatActivity {
     EditText loginBox;
     EditText passwordBox;
     DBHandler mDBHandler;
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_sign);
         mDBHandler = new DBHandler(this);
         // check if database exist
         File database = this.getApplicationContext().getDatabasePath("database.sqlite");
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                     if (loginBox.getText().toString().equals(loginList.get(i).getUsername())
                             && passwordBox.getText().toString().equals(loginList.get(i).getPassword())){
                         finish();
-                        Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                        Intent intent = new Intent(SignActivity.this, SetUpActivity.class);
                         startActivity(intent);
                     }
                 }
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
             //clear buffer
             outputStream.flush();
             outputStream.close();
-            Log.w("MainActivity", "DB copied");
+            Log.w("SignActivity", "DB copied");
             return true;
 
         } catch (Exception e) {

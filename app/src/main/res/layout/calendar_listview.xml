@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent"
-  >
+    android:weightSum="1">
 
 
 
@@ -15,12 +15,13 @@
 
        />
     <Button
-        android:text="set\n deadline"
-        android:layout_width="wrap_content"
+        android:text="Set\n deadline"
+        android:textColor="@color/white"
+        android:layout_width="51dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8sp"
         android:background="@drawable/base_button"
         android:id="@+id/dateButton"
-
-        />
+        android:textAllCaps="false"
+        android:layout_weight="0.06" />
 </LinearLayout>
