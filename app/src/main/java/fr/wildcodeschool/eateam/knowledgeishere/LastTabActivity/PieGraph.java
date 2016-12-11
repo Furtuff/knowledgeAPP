@@ -77,7 +77,7 @@ public class PieGraph extends View {
                // Random rnd = new Random();
                 //int color = Color.argb(255, (int)segment[i], rnd.nextInt(256), rnd.nextInt(256));
                 if (!isDoneOnce) {
-                    piePaint.setColor(Color.parseColor("#0000cc"));
+                    piePaint.setColor(Color.parseColor("#4a91d0"));
 
                     isDoneOnce =true;
                 }else{
