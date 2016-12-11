@@ -9,17 +9,15 @@ import com.cardiomood.android.controls.gauge.SpeedometerGauge;
 
 
 import fr.wildcodeschool.eateam.knowledgeishere.ArrayStatic;
-import fr.wildcodeschool.eateam.knowledgeishere.CustomAdapter;
-import fr.wildcodeschool.eateam.knowledgeishere.CustomAdapterDashBoard;
 import fr.wildcodeschool.eateam.knowledgeishere.R;
 
-public class DashBoardActivity extends AppCompatActivity {
+public class DashBoardActivity extends AppCompatActivity implements Bidouille  {
     private SpeedometerGauge speedometer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dash_board);
-
+        this.setTitle("DasBoard");
 
 
         // Customize SpeedometerGauge
@@ -53,12 +51,17 @@ public class DashBoardActivity extends AppCompatActivity {
                 return String.valueOf(progress);
             }
         });
-        speedometer.setSpeed(200,true);
+
 
 
         ListView dashListview = (ListView)findViewById(R.id.dashList);
-        CustomAdapterDashBoard customAdapter = new CustomAdapterDashBoard(this, ArrayStatic.fakelistDimension());
+        MainActivity.CustomAdapterDashBoard customAdapter = new MainActivity.CustomAdapterDashBoard(this, ArrayStatic.fakelistDimension());
         dashListview.setAdapter(customAdapter);
 
+    }
+
+    @Override
+    public void speed(double speed) {
+        speedometer.setSpeed(speed,true);
     }
 }

@@ -3,7 +3,7 @@
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <fr.wildcodeschool.eateam.knowledgeishere.LastTabActivity.PieGraph
-        android:layout_marginTop="10sp"
+        android:layout_marginTop="20sp"
         android:layout_marginLeft="20sp"
         android:layout_width="70sp"
         android:layout_height="wrap_content"
@@ -12,6 +12,7 @@
     </fr.wildcodeschool.eateam.knowledgeishere.LastTabActivity.PieGraph>
 
     <TextView
+        android:layout_gravity="center"
         android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
