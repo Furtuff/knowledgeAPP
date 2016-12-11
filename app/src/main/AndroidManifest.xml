@@ -16,8 +16,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Self_Assessment" />
-        <activity android:name=".Assessment"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".Assessment"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".LastTabActivity.LastTabActivity" />
         <activity android:name=".FirstActivity" />
         <activity android:name=".SecondActivity" />
@@ -33,7 +34,8 @@
         <activity android:name=".LastTabActivity.ActionPlanActivity" />
         <activity android:name=".ListCalendarActivity" />
         <activity android:name=".LastTabActivity.NewsFeedActivity" />
-        <activity android:name=".LastTabActivity.ThreePointActivity"/>
+        <activity android:name=".LastTabActivity.ThreePointActivity" />
+        <activity android:name=".LastTabActivity.TheLastMain"></activity>
     </application>
 
 </manifest>

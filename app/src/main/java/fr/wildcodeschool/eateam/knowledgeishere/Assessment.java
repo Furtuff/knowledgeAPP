@@ -14,6 +14,8 @@ public class Assessment extends TabActivity {
         super.onCreate(savedInstanceState);
         this.setTitle("Assessment");
 
+        int posAss = getIntent().getIntExtra("Next", 0);
+
         TabHost mTabHost = getTabHost();
 
         mTabHost.addTab(mTabHost.newTabSpec("first").setIndicator("A").setContent(new Intent(this  ,FirstActivity.class )));
@@ -21,7 +23,7 @@ public class Assessment extends TabActivity {
         mTabHost.addTab(mTabHost.newTabSpec("third").setIndicator("C").setContent(new Intent(this , ThirdActivity.class )));
         mTabHost.addTab(mTabHost.newTabSpec("four").setIndicator("D").setContent(new Intent(this , FourActivity.class )));
 
-        mTabHost.setCurrentTab(0);
+        mTabHost.setCurrentTab(posAss);
 
     }
 }
