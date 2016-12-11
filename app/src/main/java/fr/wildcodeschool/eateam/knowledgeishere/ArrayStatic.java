@@ -14,6 +14,15 @@ public class ArrayStatic {
         }
         return fakelist;
     }
+    public static ArrayList<String> fakelistDimension(){
+        ArrayList<String> fakelist = new ArrayList<>();
 
+        fakelist.add("5/10 Dimension A");
+        fakelist.add("6/10 Dimension B");
+        fakelist.add("8/10 Dimension C");
+        fakelist.add("4/10 Dimension D");
+
+        return fakelist;
+    }
 
 }
