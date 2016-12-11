@@ -18,7 +18,7 @@ public class LastTabActivity extends TabActivity {
         mTabHost.setTextAlignment(TabHost.TEXT_ALIGNMENT_CENTER);
 
 
-        mTabHost.addTab(mTabHost.newTabSpec("first").setIndicator("Main").setContent(new Intent(this  ,MainActivity.class )));
+        mTabHost.addTab(mTabHost.newTabSpec("first").setIndicator("Main").setContent(new Intent(this  ,DashAdapter.class )));
         mTabHost.addTab(mTabHost.newTabSpec("second").setIndicator("Action Plan").setContent(new Intent(this , ActionPlanActivity.class )));
         mTabHost.addTab(mTabHost.newTabSpec("third").setIndicator("Dash-Board").setContent(new Intent(this , DashBoardActivity.class )));
         mTabHost.addTab(mTabHost.newTabSpec("four").setIndicator("News Feed").setContent(new Intent(this , NewsFeedActivity.class )));

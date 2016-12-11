@@ -55,7 +55,7 @@ public class DashBoardActivity extends AppCompatActivity implements Bidouille  {
 
 
         ListView dashListview = (ListView)findViewById(R.id.dashList);
-        MainActivity.CustomAdapterDashBoard customAdapter = new MainActivity.CustomAdapterDashBoard(this, ArrayStatic.fakelistDimension());
+        DashAdapter.CustomAdapterDashBoard customAdapter = new DashAdapter.CustomAdapterDashBoard(this, ArrayStatic.fakelistDimension());
         dashListview.setAdapter(customAdapter);
 
     }

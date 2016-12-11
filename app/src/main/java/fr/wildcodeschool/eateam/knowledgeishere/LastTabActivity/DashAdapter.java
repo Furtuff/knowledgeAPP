@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 import fr.wildcodeschool.eateam.knowledgeishere.R;
 
-public class MainActivity extends AppCompatActivity {
+public class DashAdapter extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
