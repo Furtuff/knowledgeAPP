@@ -16,6 +16,8 @@ public class LastTabActivity extends TabActivity {
         setContentView(R.layout.activity_last_tab);
         TabHost mTabHost = getTabHost();
         mTabHost.setTextAlignment(TabHost.TEXT_ALIGNMENT_CENTER);
+        Intent intent = getIntent();
+        int clicked = intent.getIntExtra("pass",0);
 
 
         mTabHost.addTab(mTabHost.newTabSpec("first").setIndicator("Main").setContent(new Intent(this  ,MainActivity.class )));
@@ -23,6 +25,6 @@ public class LastTabActivity extends TabActivity {
         mTabHost.addTab(mTabHost.newTabSpec("third").setIndicator("Dash-Board").setContent(new Intent(this , DashBoardActivity.class )));
         mTabHost.addTab(mTabHost.newTabSpec("four").setIndicator("News Feed").setContent(new Intent(this , NewsFeedActivity.class )));
         mTabHost.addTab(mTabHost.newTabSpec("five").setIndicator("...").setContent(new Intent(this , ThreePointActivity.class )));
-        mTabHost.setCurrentTab(2);
+        mTabHost.setCurrentTab(clicked);
     }
 }
