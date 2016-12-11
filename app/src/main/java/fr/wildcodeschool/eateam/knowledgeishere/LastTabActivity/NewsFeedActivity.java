@@ -11,5 +11,6 @@ public class NewsFeedActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news_feed);
+        this.setTitle("News Feed");
     }
 }
