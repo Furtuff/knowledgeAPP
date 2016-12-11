@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.TextView;
 
 import fr.wildcodeschool.eateam.knowledgeishere.LastTabActivity.LastTabActivity;
-import fr.wildcodeschool.eateam.knowledgeishere.LastTabActivity.MainActivity;
 
 public class Main2Activity extends AppCompatActivity {
 
