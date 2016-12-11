@@ -9,5 +9,18 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="fr.wildcodeschool.eateam.knowledgeishere.LastTabActivity.DashBoardActivity">
+    <com.cardiomood.android.controls.gauge.SpeedometerGauge
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:padding="8dp"
+        android:id="@+id/speedometer"
+        />
 
+<ListView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/dashList"
+    android:layout_below="@+id/speedometer">
+
+</ListView>
 </RelativeLayout>
