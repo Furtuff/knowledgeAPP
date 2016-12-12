@@ -11,7 +11,7 @@
         android:layout_weight="1"
         android:clickable="false"
         android:checked="true"
-        android:maxWidth="240sp"
+        android:maxWidth="230sp"
         />
 
     <TextView
