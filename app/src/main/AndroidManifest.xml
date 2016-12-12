@@ -7,35 +7,38 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".LastTabActivity.LastTabActivity">
+        android:theme="@style/AppTheme"
+        >
+        <activity android:name=".SignActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Self_Assessment" />
+        <activity android:name=".Self_Assessment"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Assessment"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".SignActivity" />
-        <activity android:name=".FirstActivity" />
-        <activity android:name=".SecondActivity" />
-        <activity android:name=".ThirdActivity" />
-        <activity android:name=".FourActivity" />
-        <activity android:name=".SetTargetActivity" />
-        <activity android:name=".SetUpActivity" />
-        <activity android:name=".SetUp2Activity" />
-        <activity android:name=".SetUp3Activity" />
-        <activity android:name=".Main2Activity" />
-        <activity android:name=".LastTabActivity.DashBoardActivity" />
-        <activity android:name=".LastTabActivity.DashAdapter" />
-        <activity android:name=".LastTabActivity.ActionPlanActivity" />
-        <activity android:name=".ListCalendarActivity" />
-        <activity android:name=".LastTabActivity.NewsFeedActivity" />
-        <activity android:name=".LastTabActivity.ThreePointActivity" />
-        <activity android:name=".LastTabActivity.TheLastMain"></activity>
+            android:theme="@style/AppTheme.NoActionBar" android:screenOrientation="portrait"/>
+        <activity android:name=".LastTabActivity.LastTabActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".FirstActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".SecondActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ThirdActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".FourActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".SetTargetActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".SetUpActivity" android:screenOrientation="portrait" />
+        <activity android:name=".SetUp2Activity" android:screenOrientation="portrait" />
+        <activity android:name=".SetUp3Activity" android:screenOrientation="portrait"/>
+        <activity android:name=".Main2Activity" android:screenOrientation="portrait"/>
+        <activity android:name=".LastTabActivity.DashBoardActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".LastTabActivity.DashAdapter" android:screenOrientation="portrait"/>
+        <activity android:name=".LastTabActivity.ActionPlanActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ListCalendarActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".LastTabActivity.NewsFeedActivity" android:screenOrientation="portrait" />
+        <activity android:name=".LastTabActivity.ThreePointActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".LastTabActivity.TheLastMain" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
