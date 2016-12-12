@@ -16,8 +16,8 @@ public class SetTargetActivity extends AppCompatActivity {
         setContentView(R.layout.activity_set_target);
         this.setTitle("Set Target");
         // première ligne
-        final TextView textView1 = (TextView)findViewById(R.id.textView9);
-        SeekBar seekBar1 = (SeekBar)findViewById(R.id.seekBar1);
+        final TextView textView1 = (TextView) findViewById(R.id.textView9);
+        SeekBar seekBar1 = (SeekBar) findViewById(R.id.seekBar1);
         seekBar1.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
@@ -35,8 +35,8 @@ public class SetTargetActivity extends AppCompatActivity {
             }
         });
         //deuxième
-        final TextView textView2 = (TextView)findViewById(R.id.textView10);
-        SeekBar seekBar2 = (SeekBar)findViewById(R.id.seekBar2);
+        final TextView textView2 = (TextView) findViewById(R.id.textView10);
+        SeekBar seekBar2 = (SeekBar) findViewById(R.id.seekBar2);
         seekBar2.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
@@ -54,8 +54,8 @@ public class SetTargetActivity extends AppCompatActivity {
             }
         });
         //troisième
-        final TextView textView3 = (TextView)findViewById(R.id.textView11);
-        SeekBar seekBar3 = (SeekBar)findViewById(R.id.seekBar3);
+        final TextView textView3 = (TextView) findViewById(R.id.textView11);
+        SeekBar seekBar3 = (SeekBar) findViewById(R.id.seekBar3);
         seekBar3.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
@@ -72,8 +72,8 @@ public class SetTargetActivity extends AppCompatActivity {
 
             }
         });
-        final TextView textView4 = (TextView)findViewById(R.id.textView12);
-        SeekBar seekBar4 = (SeekBar)findViewById(R.id.seekBar4);
+        final TextView textView4 = (TextView) findViewById(R.id.textView12);
+        SeekBar seekBar4 = (SeekBar) findViewById(R.id.seekBar4);
         seekBar4.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
@@ -92,15 +92,31 @@ public class SetTargetActivity extends AppCompatActivity {
         });
 
         Button btnA = (Button) findViewById(R.id.btnA);
-        btnA.setOnClickListener(new View.OnClickListener() {
+        Button btnB = (Button) findViewById(R.id.btnB);
+        Button btnC = (Button) findViewById(R.id.btnC);
+        Button btnD = (Button) findViewById(R.id.btnD);
 
+        onClick(btnA, "Plan Dimension A");
+        onClick(btnB, "Plan Dimension B");
+        onClick(btnC, "Plan Dimension C");
+        onClick(btnD, "Plan Dimension D");
 
+    }
+
+    public void onClick(Button btn, final String pos) {
+
+        btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 Intent intent = new Intent(SetTargetActivity.this, ListCalendarActivity.class);
+                intent.putExtra("prout", pos);
                 startActivity(intent);
+
             }
         });
+
+
     }
 }
+

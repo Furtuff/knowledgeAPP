@@ -11,7 +11,7 @@ public class ListCalendarActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_calendar);
-        this.setTitle("Plan  Dimension A");
+        this.setTitle(getIntent().getStringExtra("prout"));
 
         ListView firstListview = (ListView)findViewById(R.id.ListviewCalendar);
         CustomAdapterWithCalendar customAdapter = new CustomAdapterWithCalendar(this,ArrayStatic.fakelist());
